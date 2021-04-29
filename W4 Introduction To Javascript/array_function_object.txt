@@ -1,0 +1,92 @@
+const words = ['I', 'love', 'pizza'];
+
+console.log(words[0]);
+console.log(words.length);
+
+words.push('!');
+
+console.log('after push');
+console.log(words);
+
+words.pop();
+
+console.log('after pop');
+console.log(words)
+
+words.unshift('Hey,');
+
+console.log('after unshift');
+console.log(words);
+
+const str = words.join(' ');
+console.log(str);
+
+console.log('for');
+for (let i = 0; i < words.length; i++) {
+  const word = words[i];
+  console.log(word);
+}
+
+console.log('foreach');
+words.forEach((word) => console.log(word));
+
+console.log('for...of');
+for (const word of words) {
+  console.log(word);
+}
+const person = {
+  name: 'Anthony',
+  age: 35,
+  isTeaching: true,
+  hobbies: ['reading', 'video games'],
+  education: {
+    highSchool: {
+      name: 'some high school',
+    },
+    college: {
+      name: 'MIT',
+    }
+  },
+  speak: function () {
+    console.log(`Hello class! My name is ${this.name}.`);
+  }
+}
+
+console.log(person.name);
+console.log(person['name']);
+console.log(person.hobbies[1]);
+console.log(person.education.college.name);
+
+person.speak();
+
+for (const key in person) {
+  const value = person[key];
+  console.log(key, value);
+}
+
+const keys = Object.keys(person);
+console.log(keys);
+/**
+ * Two major parts to a function
+ * 1. definition
+ * 2. execution
+ */
+
+function addFirst(x, y) {
+  return x + y;
+}
+
+const addSecond = function (x, y) {
+  return x + y;
+}
+
+const addThird = (x, y) => {
+  return x + y;
+}
+
+const addFourth = (x, y) => x + y;
+
+console.log(addFirst(5, 4));
+console.log(addSecond(5, 4));
+console.log(addThird(5, 4));
+console.log(addFourth(5, 4));
