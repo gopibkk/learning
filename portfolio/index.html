@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GopiNath's Portfolio</title>
+   </head>
+
+<body class="home-template">
+ 
+    <div class="container">
+        <div class="home__hero mt3 mb3">
+
+            <div class="home__intro mt2">
+                <h1 class="fs45">Hello Friends....</h1>
+                <h2 class="fs32 normal mb1">You can remember me as Gopi. Working for a NGO and enabaling their organization capability by utlizing approicate IT services. </h2>
+                <h3 class="fs20 normal">On this site we explore the strategies and <a href="/tech/">tools</a> that help
+                    us live happier, healthier, more productive lives.</h3>
+            </div>
+
+    <!-- 1. The <iframe> (and video player) will replace this <div> tag. -->
+        <div id="player">        
+            <script>
+                // 2. This code loads the IFrame Player API code asynchronously.
+                var tag = document.createElement('script');
+
+                tag.src = "https://www.youtube.com/iframe_api";
+                var firstScriptTag = document.getElementsByTagName('script')[0];
+                firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+                // 3. This function creates an <iframe> (and YouTube player)
+                //    after the API code downloads.
+                var player;
+                function onYouTubeIframeAPIReady() {
+                    player = new YT.Player('player', {
+                        height: '400',
+                        width: '600',
+                        //videoId: 'M7lc1UVf-VE',
+                        videoId: 'ihC1N7JpUI4',
+                        playerVars: {
+                            'playsinline': 1
+                        },
+                        events: {
+                            'onReady': onPlayerReady,
+                            'onStateChange': onPlayerStateChange
+                        }
+                    });
+                }
+
+                // 4. The API will call this function when the video player is ready.
+                function onPlayerReady(event) {
+                    event.target.playVideo();
+                }
+
+                // 5. The API calls this function when the player's state changes.
+                //    The function indicates that when playing a video (state=1),
+                //    the player should play for six seconds and then stop.
+                var done = false;
+                function onPlayerStateChange(event) {
+                    if (event.data == YT.PlayerState.PLAYING && !done) {
+                        setTimeout(stopVideo, 6000);
+                        done = true;
+                    }
+                }
+                function stopVideo() {
+                    player.stopVideo();
+                }
+            </script>
+        </div>
+
+        </div>
+
+        <div class="home__checkout font-script fs24">
+            Check out my Ultimate Guides
+            <div class="home__arrow">
+                <svg width="57" height="61" viewBox="0 0 57 61" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0)">
+                        <path
+                            d="M27.24 59.656c3.056-4.048 6.993-7.064 11.733-8.884 1.044-.403.601-2.019-.494-1.686a27.466 27.466 0 00-7.22 3.363c4.386-6.307 6.793-13.976 7.43-21.601.826-9.907-1.403-22-8.078-29.72-.977-1.136-3.166.194-2.558 1.583C30 7.16 32.27 11.285 33.525 16.038c1.242 4.705 1.793 9.525 1.53 14.385-.434 8.056-3.296 15.458-7.17 22.389-.355-2.259-1.235-4.428-2.668-6.287-1.3-1.681-4.121-.045-2.869 1.776 2.13 3.113 3.128 6.322 2.577 10.122-.167 1.186 1.416 2.426 2.317 1.233z"
+                            fill="#333" fill-opacity=".85" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0">
+                            <path transform="rotate(148.25 56.2 41.845)" fill="#fff"
+                                d="M56.2 41.845h35.638v49.209H56.2z" />
+                        </clipPath>
+                    </defs>
+                </svg>
+            </div>
+        </div>
+
+        <div class="home__topics">
+
+            <a class="home__topic-block tc color-text nolink mt2" href="/studying/">
+                <div class="fs45 mb1">✍️</div>
+                <h2 class="mb1">Studying</h2>
+                <p>How to study effectively for exams, with the best evidence-based techniques.</p>
+            </a>
+
+        </div>
+
+        <div class="home__sections">
+
+            <div class="home__explore mt4">
+
+                <h2 class="fs32 mb1">Explore</h2>
+
+                <hr class="line mb2">
+
+                <a href="/book-notes/" class="home__explore-box nolink color-text">
+                    <div class="home__explore__icon fs24">
+                        📚
+                    </div>
+                    <div>
+                        <b>Book Summaries & Notes</b>
+                        <div class="fs14">Notes, highlights and reviews of my favourite fiction and non-fiction books.
+                        </div>
+                    </div>
+                </a>
+
+                <a href="/courses/" class="home__explore-box nolink color-text">
+                    <div class="home__explore__icon fs24">
+                        🎒
+                    </div>
+                    <div>
+                        <b>My Online Courses</b>
+                        <div class="fs14">Browse all of my Skillshare classes, Part Time YouTuber Academy, and lessons
+                            on applying to medical school.</div>
+                    </div>
+                </a>
+
+                <a href="/podcast/" class="home__explore-box nolink color-text">
+                    <div class="home__explore__icon fs24">
+                        🎙
+                    </div>
+                    <div>
+                        <b>My Weekly Podcast</b>
+                        <div class="fs14">Each week, my brother and I host a podcast where we ponder about the human
+                            condition. Check it out.</div>
+                    </div>
+                </a>
+
+            </div>
+
+            <div class="home__latest mt4">
+
+                <h2 class="fs32 mb1">Latest Articles</h2>
+
+                <hr class="line mb1">
+
+                <div class="article-link">
+                    <div>
+                        <div class="fs14 color-grey b ttu">
+                            <a href="/tag/friendzone/" title="Friendzone" class="nolink">Friendzone</a>
+                        </div>
+                        <a href="/friendzone/a-hypocritically-productive-newsletter/"
+                            title="A hypocritically productive newsletter" class="nolink color-text">A hypocritically
+                            productive newsletter</a>
+                    </div>
+
+                </div>
+                <div class="article-link">
+                    <div>
+                        <div class="fs14 color-grey b ttu">
+                            <a href="/tag/tech/" title="Tools &amp; Tech" class="nolink">Tools &amp; Tech</a>
+                        </div>
+                        <a href="/my-gear/" title="My YouTube Gear + Studio Setup" class="nolink color-text">My YouTube
+                            Gear + Studio Setup</a>
+                    </div>
+
+                </div>
+                <div class="article-link">
+                    <div>
+                        <div class="fs14 color-grey b ttu">
+                            <a href="/tag/youtube/" title="YouTube" class="nolink">YouTube</a>
+                        </div>
+                        <a href="/youtube-gear-for-different-budgets/" title="YouTube Gear for Different Budgets"
+                            class="nolink color-text">YouTube Gear for Different Budgets</a>
+                    </div>
+
+                </div>
+                <div class="article-link">
+                    <div>
+                        <div class="fs14 color-grey b ttu">
+                            <a href="/tag/book/" title="Book" class="nolink">Book</a>
+                        </div>
+                        <a href="/book-notes/how-will-you-measure-your-life-book-summary-notes-highlights/"
+                            title="How will you measure your life? - Book Summary, Notes &amp; Highlights"
+                            class="nolink color-text">How will you measure your life? - Book Summary, Notes &amp;
+                            Highlights</a>
+                    </div>
+
+                </div>
+                <div class="article-link">
+                    <div>
+                        <div class="fs14 color-grey b ttu">
+                            <a href="/tag/friendzone/" title="Friendzone" class="nolink">Friendzone</a>
+                        </div>
+                        <a href="/friendzone/the-curse-of-knowledge/" title="The Curse of Knowledge"
+                            class="nolink color-text">The Curse of Knowledge</a>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <section class="newsletter-block">
+        <div class="container footer-cols">
+            <div class="footer-col">
+                <h2 class="mb2 fs28">&#128140; Join the Friendzone</h2>
+                <p>"Your emails always warm the cockles of my heart"</p>
+                <p>Join a growing community of more than 90,000 (&#129327;) friendly readers. Every Sunday I share
+                    actionable productivity tips, practical life advice, and high-quality insights from across the web,
+                    directly to your inbox.</p>
+            </div>
+
+            <div class="footer-col" style="padding-top:40px;">
+                <script async data-uid="99c4b0649f" src="https://aliabdaal.ck.page/99c4b0649f/index.js"></script>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container footer-cols">
+
+            <div class="footer-col">
+                <p>&copy; Ali Abdaal 2021. Built and hosted with <a href="https://ghost.org/ali">Ghost</a>.</p>
+            </div>
+            <div class="footer-col tr">
+                <ul class="social-list">
+                    <li>
+                        <a href="https://twitter.com/aliabdaal" aria-label="Twitter" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M24 4.6c-.9.4-1.8.7-2.8.8 1-.6 1.8-1.6 2.2-2.7-1 .6-2 1-3.1 1.2-.9-1-2.2-1.6-3.6-1.6-2.7 0-4.9 2.2-4.9 4.9 0 .4 0 .8.1 1.1-4.2-.2-7.8-2.2-10.2-5.2-.5.8-.7 1.6-.7 2.5 0 1.7.9 3.2 2.2 4.1-.8 0-1.6-.2-2.2-.6v.1c0 2.4 1.7 4.4 3.9 4.8-.4.1-.8.2-1.3.2-.3 0-.6 0-.9-.1.6 2 2.4 3.4 4.6 3.4-1.7 1.3-3.8 2.1-6.1 2.1-.4 0-.8 0-1.2-.1 2.2 1.4 4.8 2.2 7.5 2.2 9.1 0 14-7.5 14-14v-.6c1-.7 1.8-1.6 2.5-2.5z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://youtube.com/aliabdaal" aria-label="YouTube" target="_blank" rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M23.8 7.2s-.2-1.7-1-2.4c-.9-1-1.9-1-2.4-1-3.4-.2-8.4-.2-8.4-.2s-5 0-8.4.2c-.5.1-1.5.1-2.4 1-.7.7-1 2.4-1 2.4S0 9.1 0 11.1v1.8c0 1.9.2 3.9.2 3.9s.2 1.7 1 2.4c.9 1 2.1.9 2.6 1 1.9.2 8.2.2 8.2.2s5 0 8.4-.3c.5-.1 1.5-.1 2.4-1 .7-.7 1-2.4 1-2.4s.2-1.9.2-3.9V11c0-1.9-.2-3.8-.2-3.8zM9.5 15.1V8.4l6.5 3.4-6.5 3.3z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.facebook.com/aliabdaal" aria-label="Facebook" target="_blank"
+                            rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M9.032 23L9 13H5V9h4V6.5C9 2.789 11.298 1 14.61 1c1.585 0 2.948.118 3.345.17v3.88H15.66c-1.8 0-2.15.856-2.15 2.112V9h5.241l-2 4h-3.24v10H9.032z" />
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="https://www.instagram.com/AliAbdaal/" aria-label="Instagram" target="_blank"
+                            rel="noopener">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                                <g fill="#fff">
+                                    <path
+                                        d="M12 2.162c3.204 0 3.584.012 4.849.07 1.366.062 2.633.336 3.608 1.311.975.975 1.249 2.242 1.311 3.608.058 1.265.07 1.645.07 4.849s-.012 3.584-.07 4.849c-.062 1.366-.336 2.633-1.311 3.608-.975.975-2.242 1.249-3.608 1.311-1.265.058-1.645.07-4.849.07s-3.584-.012-4.849-.07c-1.366-.062-2.633-.336-3.608-1.311-.975-.975-1.249-2.242-1.311-3.608-.058-1.265-.07-1.645-.07-4.849s.012-3.584.07-4.849c.062-1.366.336-2.633 1.311-3.608.975-.975 2.242-1.249 3.608-1.311 1.265-.058 1.645-.07 4.849-.07M12 0C8.741 0 8.332.014 7.052.072c-1.95.089-3.663.567-5.038 1.942C.639 3.389.161 5.102.072 7.052.014 8.332 0 8.741 0 12c0 3.259.014 3.668.072 4.948.089 1.95.567 3.663 1.942 5.038 1.375 1.375 3.088 1.853 5.038 1.942C8.332 23.986 8.741 24 12 24s3.668-.014 4.948-.072c1.95-.089 3.663-.567 5.038-1.942 1.375-1.375 1.853-3.088 1.942-5.038.058-1.28.072-1.689.072-4.948s-.014-3.668-.072-4.948c-.089-1.95-.567-3.663-1.942-5.038C20.611.639 18.898.161 16.948.072 15.668.014 15.259 0 12 0z" />
+                                    <path
+                                        d="M12 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8z" />
+                                    <circle cx="18.406" cy="5.594" r="1.44" />
+                                </g>
+                            </svg>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/rss" aria-label="RSS" target="_blank" rel="noopener" title="RSS">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
+                                <path fill="#fff"
+                                    d="M6.503 20.752A3.25 3.25 0 013.252 24 3.25 3.25 0 010 20.752a3.25 3.25 0 013.252-3.248 3.25 3.25 0 013.251 3.248zM0 8.18v4.811c6.05.062 10.96 4.966 11.022 11.009h4.817C15.777 15.29 8.721 8.242 0 8.18zm0-3.368C10.58 4.858 19.152 13.406 19.183 24H24C23.97 10.769 13.245.046 0 0v4.812z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+    <div class="notification notification-subscribe">
+        <a class="notification-close" href="javascript:;"></a>
+        You've successfully subscribed to Ali Abdaal
+    </div>
+
+    <div class="notification notification-signup">
+        <a class="notification-close" href="javascript:;"></a>
+        Welcome! You are now a Ali Abdaal subscriber.
+    </div>
+
+    <div class="notification notification-signin">
+        <a class="notification-close" href="javascript:;"></a>
+        Welcome back! You've successfully signed in.
+    </div>
+
+    <div class="notification notification-checkout">
+        <a class="notification-close" href="javascript:;"></a>
+        Success! You are now a paying member and have access to all content.
+    </div>
+
+    <div class="notification notification-billing-update">
+        <a class="notification-close" href="javascript:;"></a>
+        Success! Your billing info is updated.
+    </div>
+
+    <div class="notification notification-billing-update-cancel">
+        <a class="notification-close" href="javascript:;"></a>
+        Billing info update failed.
+    </div>
+
+    <script>
+        // Parse the URL parameter
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        // Give the parameter a variable name
+        var action = getParameterByName('action');
+        var stripe = getParameterByName('stripe');
+
+        // Ghost will always come back to the homepage; 
+        //  some of these redirect to appropriate pages
+
+        if (action == 'subscribe') {
+            document.body.className = document.body.className + " subscribe-success";
+        }
+        if (action == 'signup') {
+            document.body.className = document.body.className + " subscribe-success";
+        }
+        if (action == 'signin') {
+            document.body.className = document.body.className + " signin-success";
+        }
+        if (stripe == 'success') {
+            if (window.location.pathname == '/') {
+                window.location = 'https://aliabdaal.com/?stripe=success';
+            }
+            document.body.className = document.body.className + " checkout-success";
+        }
+        if (stripe == 'billing-update-success') {
+            document.body.className = document.body.className + " billing-success";
+        }
+        if (stripe == 'billing-update-cancel') {
+            document.body.className = document.body.className + " billing-cancel";
+        }
+
+
+        Array.from(document.getElementsByClassName('notification-close')).forEach(close => {
+            close.addEventListener("click", function (e) {
+                e.preventDefault();
+                let n = e.target.closest('.notification')
+                n.className = n.className + ' closed';
+                var uri = window.location.toString();
+                if (uri.indexOf("?") > 0) {
+                    var clean_uri = uri.substring(0, uri.indexOf("?"));
+                    window.history.replaceState({}, document.title, clean_uri);
+                }
+            })
+        });
+    </script>
+    <script>
+        let articleLink = document.getElementsByClassName('nav-articles')[0]
+        let articleNavHtml = '<div class="nav-wrapper subnav"><span class="nav-trigger">▼</span><ul class="nav">'
+        articleNavHtml += '<li><a href="/productivity/">Productivity</a></li>'
+        articleNavHtml += '<li><a href="/studying/">Studying</a></li>'
+        articleNavHtml += '<li><a href="/youtube/">YouTubing</a></li>'
+        articleNavHtml += '<li><a href="/entrepreneurship/">Entrepreneurship</a></li>'
+        articleNavHtml += '<li><a href="/money/">Money</a></li>'
+        articleNavHtml += '<li><a href="/writing/">Writing</a></li>'
+        articleNavHtml += '<li><a href="/tech/">Tech</a></li>'
+        articleNavHtml += '<li><a href="/journal/">Journal</a></li>'
+        articleLink.innerHTML += articleNavHtml + '</ul></div>';
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.js"
+        integrity="sha512-1lagjLfnC1I0iqH9plHYIUq3vDMfjhZsLy9elfK89RBcpcRcx4l+kRJBSnHh2Mh6kLxRHoObD1M5UTUbgFy6nA=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.2.0/jquery.fitvids.min.js"
+        integrity="sha512-/2sZKAsHDmHNoevKR/xsUKe+Bpf692q4tHNQs9VWWz0ujJ9JBM67iFYbIEdfDV9I2BaodgT5MIg/FTUmUv3oyQ=="
+        crossorigin="anonymous"></script>
+
+    <script>
+
+        /* FitVids */
+        $(document).ready(function () {
+            var $postContent = $(".home__hero");
+            $postContent.fitVids();
+        });
+
+    </script>
+
+
+    <script>
+        $(function () {
+            $('.post-content a').filter(function () {
+                return this.hostname && this.hostname !== location.hostname;
+            }).attr('target', '_blank');
+        });
+    </script>
+
+    <script
+        async>(function (s, u, m, o, j, v) { j = u.createElement(m); v = u.getElementsByTagName(m)[0]; j.async = 1; j.src = o; j.dataset.sumoSiteId = 'a117e2c67efd486ec54f523c168d4b631f93301fc5f3ff7d1f31d4f0ceb5d30f'; v.parentNode.insertBefore(j, v) })(window, document, 'script', '//load.sumo.com/');</script>
+
+</body>
+
+</html>
