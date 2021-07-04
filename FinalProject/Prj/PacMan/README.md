@@ -1,9 +1,7 @@
-
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/github_username/repo_name">
-    <img src="./img/logo.png" alt="Logo" width="300" height="150">
+   <img src="./img/logo.png" alt="Logo" width="300" height="150">
   </a>
    <p align="justify">
     In 80s Pac-Man was a video game developed by japanese developer who travels around a maze trying to eat dots and avoid hunting ghosts.
@@ -30,6 +28,7 @@
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
+
 Basic exercise explains the movement of a single PacMan image across the screen and reversing motion upon reaching the page limit. In addition, this exercise helps to understand the basics of DOM concepts.
 The advanced exercise explains how to add more PacMan images, control the movement in a zigzag pattern, and reverse the direction upon page limits.
 
@@ -42,6 +41,7 @@ javascript and HTML
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
+
 <ol>
     <li>Download all HTML and IMG folders</li>
      <li>Open the .html file in the browser</li>
@@ -74,8 +74,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Contact
 
-Gopinath -  email ramalingam@un.org
-
+Gopinath - email ramalingam@un.org
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
