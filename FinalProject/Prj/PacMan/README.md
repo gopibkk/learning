@@ -5,7 +5,6 @@
   <a href="https://github.com/github_username/repo_name">
     <img src="./img/logo.png" alt="Logo" width="300" height="150">
   </a>
-
   <h3 align="center">PacMan Execise</h3>
   <p align="center">
     In 80s Pac-Man was a video game developed by japanese developer who travels around a maze trying to eat dots and avoid hunting ghosts.
@@ -22,27 +21,18 @@
       <ul>
         <li><a href="#built-with">Built With</a></li>
       </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
+    </li>   
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#contact">Contact</a></li>    
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
-Basic execise explains the movement of PacMan image across the screen and reversing direction. This exercise will help to understand the basic of This will model how the browser holds information in memory.
+Basic exercise explains the movement of a single PacMan image across the screen and reversing motion upon reaching the page limit. In addition, this exercise helps to understand the basics of DOM concepts.
+The advanced exercise explains how to add more PacMan images, control the movement in a zigzag pattern, and reverse the direction upon page limits.
 
 ### Built With
 
@@ -53,35 +43,10 @@ javascript and HTML
 ## Getting Started
 
 To get a local copy up and running follow these simple steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-
-- npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-1. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-2. Install NPM packages
-   ```sh
-   npm install
-   ```
-
-<!-- USAGE EXAMPLES -->
-
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
+<ol>
+    <li>Download all HTML and IMG folders</li>
+     <li>Open the .html file in the browser</li>
+</ol>
 <!-- ROADMAP -->
 
 ## Roadmap
