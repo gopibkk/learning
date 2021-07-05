@@ -86,12 +86,25 @@ body {
 }
 
 .container-img {
-  width: 100px;
+  width: 250px;
+  height: 110px;
+  margin-top: 20px;
+}
+
+.container-img1 {
+  width: 250px;
   margin-top: 20px;
 }
 
 .assignment {
   padding: 20px;
+}
+
+.para-prj {
+  text-align: justify;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(184, 80, 11);
 }
 .assignment h4 {
   padding: 5px;
