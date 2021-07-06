@@ -1,5 +1,5 @@
 // define our access token
-const accessToken = 'pk.eyJ1IjoicnN3ZWV0ZW4wMSIsImEiOiJja3BwZ2I2anEyNzhsMnBueW5sdG5zcno2In0.6uWMmZrrC9prUL-2AI0kmg';
+const accessToken = 'pk.eyJ1IjoiZ29waW5hdGg5MDAiLCJhIjoiY2txcmVkM3B1MWcwODJubnBic2t4NGZtZyJ9.eEncHJ9e1pLLvHTWU44gkQ';
 
 // set the access token
 mapboxgl.accessToken = accessToken;
@@ -71,3 +71,4 @@ update(map, markers);
 let intervalId = setInterval(() => update(map, markers), 15000);
 // tell the window to cancel the timer when the window closes
 window.onunload = () => clearInterval(intervalId);
+
