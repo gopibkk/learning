@@ -14,6 +14,13 @@ const words = (data) => {
 // This should print the length of the words array returned
 console.log(words(lorem).length);
 
+let list = {};
+words(lorem).map(item => list[item] ? list[item]++ : list[item] = 1);
+console.log(list);
+
+
+/*
+
 // TODO: write a function to count the number of occurrences of each word
 const wordFrequency = (words) => {
   // Instantiate our object of words
@@ -35,7 +42,9 @@ const wordFrequency = (words) => {
 // This should print an array containing all words and their occurrences
 console.log(wordFrequency(words(lorem)));
 
+*/
+
 //don't change this line
-if (typeof module !== 'undefined') {
-  module.exports = { words, wordFrequency, lorem };
-}
+// if (typeof module !== 'undefined') {
+//   module.exports = { words, wordFrequency, lorem };
+// }
