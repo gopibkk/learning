@@ -1,0 +1,135 @@
+<html>
+
+<head>
+    <title>Working with Lists in React</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="proxima-nova-web-fonts-master/fonts/fonts.css" />
+</head>
+
+<body>
+    <div class="container">
+        <img src="mitxprologo.jpg" alt="MIT XPro Logo" width="250px" height="80px">
+        <h1 class="header-text">Working with Lists in React</h1>
+    </div>
+    <p>Please review the concepts covered this week.</p>
+
+
+<h2 id="crud">CRUD</h2>
+<p>To create any app, you will need to complete four basic tasks which include: creating some data, 
+  reading some data, updating some data, and deleting some data to complete a full data lifecycle. 
+  For instance, to create a to-do app, you need to do the following:  </p>
+<ol>
+<li><p>Create a to-do item. (Create)</p>
+</li>
+<li><p>Display the to-do item to the screen. (Read)</p>
+</li>
+<li><p>Make changes to an existing todo item. (Update)</p>
+</li>
+<li><p>Delete a todo item. (Delete)</p>
+</li>
+</ol>
+<h2 id="hooks">Hooks</h2>
+<p>Hooks allow you to use state and other features of React without having to write a class. 
+    They also provide a way to attach reusable behavior to a React component. 
+    Hooks &quot;hook in&quot; to React&#39;s features and allow you to avoid class-based lifecycle problems. 
+    They are backwards-compatible and do not need to be included in your React applications 
+    if you do not want to use them. However, they are a great way to share and maintain stateful 
+    logic in your components. </p>
+<h2 id="usestate">useState</h2>
+<p>In React, state plays a very important role to track the status of a piece of data at any given time. In the past, 
+  if you wanted to manage state before hooks, you would need to make a class out of your component. But
+  useState allows you to manage state inside your React components without needing to convert your components into a class.  
+  useState takes one argument, the initial state, and only uses that on the first render. </p>
+<p>Here&#39;s an example from the <a href="https://reactjs.org/docs/hooks-state.html">React.js docs</a> using a counter, 
+  displaying a number and managing the counter&#39;s state. Whenever someone clicks on the counter button, the counter increments by one. 
+  Now take a look at it first without a hook, using a class component:  </p>
+<pre><code class="lang-js">class Example extends React.Component {
+  constructor(props) {
+    super(props);
+    this.<span class="hljs-keyword">state</span> = {
+      count: <span class="hljs-number">0</span>
+    };
+  }
+
+  render() {
+    return (
+      <span class="hljs-variable">&lt;div&gt;</span>
+        <span class="hljs-variable">&lt;p&gt;</span>You clicked {this.<span class="hljs-keyword">state</span>.count} times&lt;/p&gt;
+        <span class="hljs-variable">&lt;button onClick={() =&gt;</span> this.<span class="hljs-built_in">set</span>State({ count: this.<span class="hljs-keyword">state</span>.count + <span class="hljs-number">1</span> })}&gt;
+          Click me
+        &lt;/button&gt;
+      &lt;/div&gt;
+    );
+  }
+}
+</code></pre>
+<p>Now, using a useState hook, look at the same functionality, written in a different way. Note how this code is considerably cleaner. </p>
+<pre><code class="lang-js"><span class="hljs-keyword">import</span> React, { useState } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>;
+
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">Example</span>(<span class="hljs-params"></span>) </span>{
+  <span class="hljs-comment">// Declare a new state variable, which we'll call "count"</span>
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+
+  <span class="hljs-keyword">return</span> (
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">p</span>&gt;</span>You clicked {count} times<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onClick</span>=<span class="hljs-string">{()</span> =&gt;</span> setCount(count + 1)}&gt;
+        Click me
+      <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  );
+}
+</code></pre>
+<p>As you can see, you can declare initial state with the useState hook much faster than in the class example. Also, you don&#39;t have to use the <em>this</em> keyword, as the component can track its own state with useState. </p>
+
+<h2 id="useeffect">useEffect</h2>
+<p>The useEffect hook is a great hook to be able to decouple &quot;side effects&quot; 
+    from having to use lifecycle methods. A side effect is essentially when a component needs to reach 
+    outside its scope of duty and do something else, like updating a title page.  
+    The useEffect hook is also a great way to re-run any code you want to run upon a change in your code.
+    useEffect replaces using componentDidMount() and componentDidUpdate() in class-based components. You can write "side effect" functionality,
+    without having to use classes or componentDidMount()/componentDidUpdate(). 
+    Here&#39;s an example of useEffect in action.  In this example, useState manages the state of a counter and there is also  a "side effect" of saying hello and telling you how many times you've clicked based on a button being pushed, which is managed with
+    useEffect. </p>
+    <pre><code class="lang-js">
+<span class="hljs-keyword">import</span> React, { useState, useEffect } <span class="hljs-keyword">from</span> <span class="hljs-string">'react'</span>
+
+<span class="hljs-keyword">const</span> Counter = <span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+  <span class="hljs-keyword">const</span> [count, setCount] = useState(<span class="hljs-number">0</span>);
+
+  useEffect(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    <span class="hljs-built_in">console</span>.log(<span class="hljs-string">`Hi! You've clicked <span class="hljs-subst">${count}</span> 
+  times`</span>)
+  })
+
+  <span class="hljs-keyword">return</span>( 
+    <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">onclick</span>=<span class="hljs-string">{()</span> =&gt;</span> 
+  setCount(count+1}&gt;Click Me!<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span>
+  )
+}
+
+ReactDOM.render(
+  <span class="xml"><span class="hljs-tag">&lt;<span class="hljs-name">Counter</span>/&gt;</span></span>, 
+  <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'root'</span>)
+)
+</code></pre>
+
+<h2 id="separation-of-concerns">Separation of concerns</h2>
+<p>The separation of concerns is important to keep your code clean, easy to read and non-repetitive. 
+  This is important, especially in large codebases, because if you  have too much functionality in one file, you won&#39;t be able to 
+  re-use your code as easily down the line, and you&#39;ll have to keep writing the same code over and over in order to maintain functionality. 
+  In the videos, Professor Sanchez shows you how to refactor your todo list into separate files, including breaking out the functionality 
+  of a form into its own separate file.  To see this in action, check out the &quot;Refactoring Forms&quot; video. </p>
+
+<h2 id="react-dom">React DOM</h2>
+<p>The ReactDOM is a package that provides DOM specific methods that can be used at the top level of a web app to enable an efficient 
+  way of managing DOM elements of the web page. The React DOM creates an entire virtual copy of everything that is happening on the 
+  browser&#39;s regular DOM, and tracks any updates a user makes through the browser. When a user changes something on the webpage 
+  (for example, they click a button), the React virtual DOM responds by going to the DOM tree, finding that node that is responsible 
+  for the thing that was changed (i.e., the button that was clicked), updating only that node on the DOM tree. 
+  This saves time because the entire DOM tree on the browser does not need to be re-built every time an update or a change 
+  is made on the browser. </p>
+</body>
+</html>
