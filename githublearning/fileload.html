@@ -1,0 +1,31 @@
+var posts = [
+{
+title: "Mit",
+content: "Great Place to Hang Out"
+},
+{
+title: "Cricket",
+content: "Takes a While To Master"
+},
+{
+title: "Marmalade",
+content: "Chunky is the best"
+}
+]
+
+The index.html file in your program that contains this code is:
+
+<div id="container"></div>
+
+<script src="posts.js"></script>
+<script>
+    const len = posts.length;
+    var html = '';
+    for (let i = 0; i < len; i++) {
+        html += '<li class="post">' +
+            '<h2>' + posts[i].title + '</h2>' +
+            '<h3>' + posts[i].content + '</h3>'
+    }
+    const container = document.getElementById('container');
+    container.innerHTML = '<ul id = "posts">' + html + '</ul>';
+</script>
